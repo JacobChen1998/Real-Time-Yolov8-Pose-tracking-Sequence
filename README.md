@@ -15,3 +15,37 @@ However, the original repository has not yet provided an effective mechanism for
 Therefore, I was inspired to propose an algorithm for posture sequence development.
 The concept of this method:
 ![Concept of this method](https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence/blob/main/pose_track_illustruction.png)
+
+
+## Quick start with anaconda 
+
+#### 0. Clone and into project 
+```
+git clone https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence
+cd Real-Time-Yolov8-Pose-tracking-Sequence/
+```
+
+#### 1. Environment create
+```
+conda create --name posetrack python=3.8
+```
+
+#### 2. Environment activate
+```
+conda activate posetrack
+```
+
+#### 3. Packages install
+```
+pip install ultralytics
+```
+
+#### 4. Run the code
+```
+   python main.py --video_path <your_video_path>
+```
+(option):
+```
+   --kptSeqNum : 
+```
+
