@@ -16,6 +16,9 @@ Therefore, I was inspired to propose an algorithm for posture sequence developme
 The concept of this method:
 ![Concept of this method](https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence/blob/main/pose_track_illustruction.png)
 
+Demo:
+![Concept of this method](https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence/blob/main/demo.gif)
+
 
 ## Quick start with anaconda 
 
