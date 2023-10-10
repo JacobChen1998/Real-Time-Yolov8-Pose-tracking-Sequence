@@ -13,3 +13,5 @@ The primary purpose of attitude tracking is to acquire successive attitudes of e
 
 However, the original repository has not yet provided an effective mechanism for each identity to assemble its data sequence.
 Therefore, I was inspired to propose an algorithm for posture sequence development.
+The concept of this method:
+![Concept of this method](https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence/blob/main/pose_track_illustruction.png)
