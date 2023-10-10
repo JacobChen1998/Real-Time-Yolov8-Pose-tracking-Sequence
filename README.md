@@ -42,13 +42,13 @@ pip install ultralytics
 
 #### 4. Run the code
 ```
-   python main.py --video_path <your_video_path>
+python main.py --video_path <your_video_path>
 ```
 (argparse option):
 ```
-   --max_miss : number of miss track than empty tracked seqeunce
-   --kptSeqNum : The max keypoint sequence number. The default value is None which means it will append until max_miss trigger.
-   --GPU_no : GPU number of using. The default value is 0 which means first GPU.
+--max_miss : number of miss track than empty tracked seqeunce
+--kptSeqNum : The max keypoint sequence number. The default value is None which means it will append until max_miss trigger.
+--GPU_no : GPU number of using. The default value is 0 which means first GPU.
 
 ex: python main.py --video_path <your_video_path> --kptSeqNum 40 --max_miss 5 --GPU_no 0
 ```
