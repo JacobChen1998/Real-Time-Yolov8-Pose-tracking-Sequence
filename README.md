@@ -44,8 +44,10 @@ pip install ultralytics
 ```
    python main.py --video_path <your_video_path>
 ```
-(option):
+(argparse option):
 ```
-   --kptSeqNum : 
+   --max_miss : number of miss track than empty tracked seqeunce
+   --kptSeqNum : The max keypoint sequence number. The default value is None which means it will append until max_miss trigger.
+   --GPU_no : GPU number of using. The default value is 0 which means first GPU.
 ```
 
