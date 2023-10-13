@@ -20,8 +20,8 @@ Demo:
 ![Concept of this method](https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence/blob/main/demo.gif)
 
 Demo set
-![Org_frames](https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence/tree/main/demo/no_set_max.gif)
-![Demo_frames](https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence/tree/main/demo/set_max_40.gif)
+![Org_frames](https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence/blob/main/demo/no_set_max.gif)
+![Demo_frames](https://github.com/JacobChen1998/Real-Time-Yolov8-Pose-tracking-Sequence/blob/main/demo/set_max_40.gif)
   
    
 ## Quick start with anaconda 
