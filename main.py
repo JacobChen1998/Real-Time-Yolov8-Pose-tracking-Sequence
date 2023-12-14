@@ -19,7 +19,7 @@ kptSeqNum = args.kptSeqNum
 if kptSeqNum is not None:
     kptSeqNum = int(kptSeqNum)
 # Load the YOLOv8 model
-model = YOLO('weights/yolov8s-pose.pt')
+model = YOLO('weights/yolov8x-pose-p6.pt')
 cap = cv2.VideoCapture(video_path)
 track_history=defaultdict(lambda: [])
 drop_counting=defaultdict(lambda: 0)
@@ -71,6 +71,7 @@ def plot_skeleton_kpts(im, kpts, steps, orig_shape=None):
         cv2.line(im, pos1, pos2, (int(r), int(g), int(b)), thickness=2)
     return im
 
+count = 0
 while cap.isOpened():
     success, frame = cap.read()
     t1 = time.time()
@@ -122,7 +123,7 @@ while cap.isOpened():
         boxess.append(box)
     # print(track_ids_conform_frame_num)
     for resultIdx,track_id in enumerate(track_ids_conform_frame_num):
-        number_of_seq = poseTrackResult[resultIdx].shape
+        number_of_seq = poseTrackResult[resultIdx].numpy().shape
         current_kpt = poseTrackResult[resultIdx][0,-1,:,:].numpy().flatten()
         x,y,w,h = boxess[resultIdx]
         x1,y1,x2,y2 = int(x-(w/2)),int(y-(h/2)),int(x+(w/2)),int(y+(h/2))
@@ -134,8 +135,10 @@ while cap.isOpened():
         cv2.rectangle(frame,(x1,y1),(x2,y2),(0,255,0),3)
         cv2.putText(frame, text, (x1, y1+15), cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 0, 255), 1, cv2.LINE_AA)
     cv2.imshow('Result', frame)
+    # cv2.imwrite(f"results/{count}.png",frame)
     if cv2.waitKey(1) == ord('q'):
         break
+    count+=1
 cap.release()
 cv2.destroyAllWindows()
 
